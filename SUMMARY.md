@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hoşgeldin](README.md)
+* [😄 Hoşgeldin](README.md)
 * [Quick Start](quick-start.md)
 
 ## Reference
