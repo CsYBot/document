@@ -1,55 +1,20 @@
-<p align="center"><a href="https://nodei.co/npm/smart-chatbot/"><img src="https://nodei.co/npm/smart-chatbot.png"></a></p>
+<p align="center"><a href="https://nodei.co/npm/smart-chatbot"><img src="https://nodei.co/npm/smart-chatbot.png"></a></p>
 
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/v/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/dt/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/l/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/badge/Chat-Click%20here-7289d9?style=for-the-badge&logo=discord" alt="npm"></a>
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/github/repo-size/Lebyy/smartestchatbot?style=for-the-badge" alt="npm"></a>
+<p align="center"><img src="https://img.shields.io/npm/v/smart-chatbot?style=for-the-badge"> <img src="https://img.shields.io/github/repo-size/CsYBot/smart-chatbot?style=for-the-badge"> <img src="https://img.shields.io/npm/l/smart-chatbot?style=for-the-badge"> <img src="https://img.shields.io/npm/dt/smart-chatbot?style=for-the-badge"> <img src="https://img.shields.io/github/contributors/CsYBot/smart-chatbot?style=for-the-badge"> <img src="https://img.shields.io/github/package-json/dependency-version/CsYBot/smart-chatbot/superagent?style=for-the-badge"> <a href="https://discord.gg/gkmwaAZQBu" target="_blank"> <img alt="Discord" src="https://img.shields.io/badge/CsYBot%20Support-Click%20here-7289d9?style=for-the-badge&logo=discord"> </a></p>
 
 # smart-chatbot
-
-**Examples:**
+ 
+**Javascript:**
 ```js
 const chatbot = require("smart-chatbot");
 const chatclient = new chatbot.Client("SECRET KEY", "BOT NAME");
 
 chatclient.chat({
-	message: "Hello",
-	user: "SECRET USER ID"
+  message: "Hello",
+  user: "SECRET USER ID",
+  language: "tr" // (tr, en)
 }).then(answer => console.log);
 ```
-
-**Discord Bot (tag) Message Chatbot:**
-```js
-const Discord = require("discord.js");
-const client = new Discord.Client({
-  partials: ["MESSAGE", "CHANNEL"],
-  intents: [
-    Discord.Intents.FLAGS.GUILDS,
-    Discord.Intents.FLAGS.GUILD_MESSAGES,
-  ]
-});
-const chatbot = require("smart-chatbot"); 
-const chatclient = new chatbot.Client("SECRET KEY", "BOT NAME");
-
-client.on("message", async(message) => {
-  if(!message || !message.content || !message.author || message.author.bot) return;
-  
-  if (message.content.startsWith(`<@${client.user.id}>`) || message.content.startsWith(`<@!${client.user.id}>`)) {
-       let args = message.content.split(" ").slice(1);
-       let soru = args.slice(0).join(' ');
-
-       let reply = await chatclient.chat({ 
-           message: soru, 
-           user: message.author.id 
-        });
-     message.channel.send(reply);
-  }
-});
-
-client.login("SECRET DISCORD BOT TOKEN");
-```
-<br>
 
 **What is SECRET KEY?**
 
