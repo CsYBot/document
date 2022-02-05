@@ -1,5 +1,12 @@
+<p align="center"><a href="https://nodei.co/npm/smart-chatbot/"><img src="https://nodei.co/npm/smart-chatbot.png"></a></p>
+
+<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/v/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
+<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/dt/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
+<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/l/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
+<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/badge/Chat-Click%20here-7289d9?style=for-the-badge&logo=discord" alt="npm"></a>
+<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/github/repo-size/Lebyy/smartestchatbot?style=for-the-badge" alt="npm"></a>
+
 # smart-chatbot
-<a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/dt/smart-chatbot.svg?style=for-the-badge" alt="npm"></a><a href="https://npmjs.com/package/smart-chatbot" rel="nofollow"><img src="https://img.shields.io/npm/v/smart-chatbot.svg?style=for-the-badge" alt="npm"></a>
 
 **Examples:**
 ```js
@@ -11,8 +18,8 @@ chatclient.chat({
 	user: "SECRET USER ID"
 }).then(answer => console.log);
 ```
-<br>
-Discord Bot (tag) Message Chatbot
+
+**Discord Bot (tag) Message Chatbot:**
 ```js
 const Discord = require("discord.js");
 const client = new Discord.Client({
